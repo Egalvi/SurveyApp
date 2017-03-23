@@ -1,0 +1,360 @@
+<survey xmlns="https://www.egalvi.ru/survey"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.egalvi.ru/survey survey.xsd">
+    <name>Отношение к сексу</name>
+    <questions>
+        <!-- 1 -->
+        <question>
+            <text>Верите вы в существование идеального(ой) мужчины (женщины)?</text>
+            <answer>
+                <scale name='scale' value='+5' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 2 -->
+        <question>
+            <text>Свойственно ли вам постоянство в любви?</text>
+            <answer>
+                <scale name='scale' value='+5' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 3 -->
+        <question>
+            <text>Считаете ли вы, что девушка до замужества должна быть невинной?</text>
+            <answer>
+                <scale name='scale' value='+5' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 4 -->
+        <question>
+            <text>Считаете ли вы то же самое по отношению к мужчине?</text>
+            <answer>
+                <scale name='scale' value='+5' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Нет</text>
+            </answer>
+        </question>
+
+        <!-- 5 -->
+        <question>
+            <text>Оставил(а) ли в вашей жизни (памяти) светлый след хотя бы один(на) мужчина (женщина)?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+1' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 6 -->
+        <question>
+            <text>Склонны ли вы преувеличивать достоинства тех, кого любите?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+1' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 7 -->
+        <question>
+            <text>Ревнуете ли вы его (ее) к прошлому?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+1' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 8 -->
+        <question>
+            <text>Случалось ли вам оскорблять любимого человека?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+1' />
+                <text>Нет</text>
+            </answer>
+        </question>
+
+        <!-- 9 -->
+        <question>
+            <text>Способны ли вы любить мужчину (женщину), зная обо всех его(ее) любовных похождениях?</text>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 10 -->
+        <question>
+            <text>Способны ли вы в присутствии мужчины (женщины) рассказать неприличный анекдот?</text>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 11 -->
+        <question>
+            <text>Доставляет ли вам удовольствие рассказывать о своих любовных победах?</text>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+
+        <!-- 12 -->
+        <question>
+            <text>Способны ли вы простить красивому(ой) мужчине (женщине): </text>
+            <answer>
+                <scale name='scale' value='+2' />
+                <text>глупость</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>жестокость</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>непостоянство</text>
+            </answer>
+        </question>
+        <!-- 13 -->
+        <question>
+            <text>О каком(ой) мужчине (женщине) вы мечтаете: </text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>остроумном(ой), интеллектуальном (ой)</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>веселом(ой), непритязательном(ой)</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+2' />
+                <text>сдержанном (ой), хозяйственном(ой)</text>
+            </answer>
+        </question>
+        <!-- 14 -->
+        <question>
+            <text>Какие чувства вызывает у вас признание в любви нелюбимого человека: </text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>досаду</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>смятение</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>тщеславную радость</text>
+            </answer>
+        </question>
+        <!-- 15 -->
+        <question>
+            <text>Какую измену считаете страшнее:</text>
+            <answer>
+                <scale name='scale' value='+2' />
+                <text>физическую</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>духовную</text>
+            </answer>
+        </question>
+        <!-- 16 -->
+        <question>
+            <text>Считаете ли вы, что иметь одновременно мужа (жену) и любовника(любовницу): </text>
+            <answer>
+                <scale name='scale' value='+4' />
+                <text>достойно</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>аморально</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+2' />
+                <text>лишь в трудных жизненных ситуациях</text>
+            </answer>
+        </question>
+
+        <!-- 17 -->
+        <question>
+            <text>Нравится ли вам ветреная погода?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 18 -->
+        <question>
+            <text>Получаете ли вы удовольствие от физического труда, занятий спортом?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 19 -->
+        <question>
+            <text>Хотелось ли вам на себе опробовать действие наркотика?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 20 -->
+        <question>
+            <text>Нравятся ли вам экзотические мужчины (женщины)?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 21 -->
+        <question>
+            <text>Быстро ли вам надоедают мужчины (женщины)?</text>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Нет</text>
+            </answer>
+        </question>
+
+        <!-- 22 -->
+        <question>
+            <text>Можете ли вы порвать с любовником (цей) из-за корыстных целей?</text>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Нет</text>
+            </answer>
+        </question>
+        <!-- 23 -->
+        <question>
+            <text>Вызывают ли у вас отвращение гомосексуалисты?</text>
+            <answer>
+                <scale name='scale' value='+0' />
+                <text>Да</text>
+            </answer>
+            <answer>
+                <scale name='scale' value='+3' />
+                <text>Нет</text>
+            </answer>
+        </question>
+
+    </questions>
+    <keys>
+        <key>
+            <scale name='scale' minValueInclusive='+0' maxValueInclusive="+10"/>
+            <text>Ханжа.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+11' maxValueInclusive="+15"/>
+            <text>В вас сильно развито рациональное начало, вы очень требовательны к мужчинам (женщинам), подозрительны, ревнивы.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+16' maxValueInclusive="+20"/>
+            <text>Вы невинны душой и телом, у вас нет друзей, которые бы оказали на вас развращающее действие.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+21' maxValueInclusive="+30"/>
+            <text>Вы либо старый человек, либо больны, а может, стараетесь казаться не тем, кто вы есть на самом деле.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+31' maxValueInclusive="+35"/>
+            <text>В вас прочные моральные устои, ваш идеал крепкая, дружная семья, основанная на любви.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+36' maxValueInclusive="+40"/>
+            <text>Вы не способны на безрассудство, случайные срывы очень мучат вас, вы созданы для семьи, в любви стремитесь к прочности, к своему избраннику довольно требовательны.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+41' maxValueInclusive="+50"/>
+            <text>Вы — человек современных взглядов, не склонны осуждать кого-либо, однако сами ведете довольно сдержанную половую жизнь.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+51' maxValueInclusive="+55"/>
+            <text>В вас много нерастраченной энергии, вы — молоды и стремитесь взять от жизни все и как можно больше, секс для вас — органическая потребность. </text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+56' maxValueInclusive="+60"/>
+            <text>Вы — увлекающаяся натура, но вы способны на глубокое чувство, неразделенная любовь может стать трагедией вашей жизни. </text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+61' maxValueInclusive="+65"/>
+            <text>Вы мечтаете о необыкновенном(ой) мужчине (женщине), но размениваете себя на случайные встречи, ваша личная жизнь не удовлетворяет вас, однако в вашем поведении виноваты лишь вы, ибо возможность выбрать достойного спутника(цу) у вас есть.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+66' maxValueInclusive="+70"/>
+            <text>В вашей жизни была большая любовь, окончившаяся крахом для ваших надежд, вы разочарованы, ведете беспорядочную жизнь, впрочем, мужчины (женщины) вас любят.</text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+71' maxValueInclusive="+80"/>
+            <text>Вам кажется, что вы познали все, вы бравируете вашей разочарованностью в мужчине (женщине), однако каждое ваше знакомство возрождает в вас надежду на счастье. </text>
+        </key>
+        <key>
+            <scale name='scale' minValueInclusive='+81'/>
+            <text> Вы развратны, циничны, буйная молодость утомила вас. Ваш (а) мужчина (женщина) покинул (а) вас, или вы бываете на грани развода, однако вы еще способны увлечься мужчиной (женщиной).</text>
+        </key>
+
+    </keys>
+</survey>
