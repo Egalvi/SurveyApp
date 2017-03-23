@@ -1,4 +1,4 @@
-package com.egalvi.surveyapp;
+package com.egalvi.surveyapp.answerholder;
 
 import ru.egalvi.survey.model.Answer;
 

@@ -1,19 +1,14 @@
 package com.egalvi.surveyapp;
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.egalvi.surveyapp.answerholder.AnswerButton;
 
 import ru.egalvi.survey.model.Answer;
 import ru.egalvi.survey.model.Question;
@@ -22,106 +17,46 @@ import ru.egalvi.survey.service.impl.SurveyServiceImpl;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Answer checkedAnswer;
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         try {
             SurveyServiceImpl service = new SurveyServiceImpl(getAssets().open("test.xml"));
             final SurveyIterationHandlerImpl survey = service.getSurvey();
 
-            final Button next = (Button) findViewById(R.id.forward);
-            next.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (checkedAnswer != null) {
-                        survey.setAnswer(checkedAnswer);
-                    }
-                    TextView questionText = (TextView) MainActivity.this.findViewById(R.id.questionText);
-                    RadioGroup answers = (RadioGroup) MainActivity.this.findViewById(R.id.answerContainer);
-                    if (survey.hasNestQuestion()) {
-                        Question question = survey.getNextQuestion();
-                        questionText.setText(question.getText());
-                        next.setText(survey.hasNestQuestion() ? "NEXT" : "RESULT");
-                        answers.removeAllViews();
-                        for (Answer a : question.getAnswer()) {
-                            RadioButton newRadioButton = new AnswerRadioButton(MainActivity.this, a);
-                            newRadioButton.setText(a.getText());
-                            answers.addView(newRadioButton);
-                        }
-                    } else {
-                        questionText.setText(survey.getResult());
-                        answers.setVisibility(View.GONE);
-                    }
-                }
-            });
-
-            final RadioGroup answers = (RadioGroup) MainActivity.this.findViewById(R.id.answerContainer);
-            answers.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                    switch (checkedId) {
-                        case -1:
-                            checkedAnswer = null;
-//                            Toast.makeText(getApplicationContext(), "Ничего не выбрано",
-//                                    Toast.LENGTH_SHORT).show();
-                            break;
-                        default:
-                            HasAnswer checkedRB = (HasAnswer) findViewById(checkedId);
-//                            Toast.makeText(getApplicationContext(), "Выбран переключатель " + checkedId + " " + checkedRB.getAnswer().getText(),
-//                                    Toast.LENGTH_SHORT).show();
-                            checkedAnswer = checkedRB.getAnswer();
-                            break;
-                    }
-                }
-            });
+            handleQuestion(survey);
         } catch (Exception e) {
             //TODO!!!
             e.printStackTrace();
         }
+    }
 
-
-//        while (survey.hasNestQuestion()) {
-//            Question question = survey.getNextQuestion();
-//            System.out.println(question.getText());
-//            List<Answer> answers = question.getAnswer();
-//            int i = 0;
-//            for (Answer a : answers) {
-//                System.out.println(++i + ". " + a.getText());
-//            }
-//
-//            Integer answerNumber = null;
-//            while (answerNumber == null) {
-//                System.out.print("Enter answer number:");
-//                try {
-//                    answerNumber = Integer.parseInt(br.readLine());
-//                    if (answerNumber > answers.size() || answerNumber <= 0) {
-//                        answerNumber = null;
-//                        System.err.println("Invalid input");
-//                    }
-//                } catch (NumberFormatException nfe) {
-//                    System.err.println("Invalid Format!");
-//                }
-//            }
-////            answerNumber = aI.next();
-//
-//            survey.setAnswer(answers.get(answerNumber - 1));
-//        }
-//        System.out.println(survey.getResult());
+    private void handleQuestion(final SurveyIterationHandlerImpl survey) {
+        TextView questionText = (TextView) MainActivity.this.findViewById(R.id.questionText);
+        LinearLayout answers = (LinearLayout) MainActivity.this.findViewById(R.id.answerContainer);
+        if (survey.hasNestQuestion()) {
+            Question question = survey.getNextQuestion();
+            questionText.setText(question.getText());
+            answers.removeAllViews();
+            for (Answer a : question.getAnswer()) {
+                final AnswerButton answer = new AnswerButton(MainActivity.this, a);
+                answers.addView(answer);
+                answer.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        survey.setAnswer(answer.getAnswer());
+                        handleQuestion(survey);
+                    }
+                });
+            }
+        } else {
+            questionText.setText(survey.getResult());
+            answers.setVisibility(View.GONE);
+        }
     }
 
     @Override

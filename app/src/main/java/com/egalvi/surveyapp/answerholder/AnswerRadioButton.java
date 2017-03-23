@@ -1,4 +1,4 @@
-package com.egalvi.surveyapp;
+package com.egalvi.surveyapp.answerholder;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatRadioButton;
